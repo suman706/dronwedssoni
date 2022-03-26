@@ -46,8 +46,6 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <script src="info.js"></script>
-
     <!-- FAVICONS -->
     <link rel="icon" href="assets/img/favicon-16x16.png" type="image/png" sizes="16x16">
     <link rel="shortcut icon" href="assets/img/favicon-16x16.png" type="image/x-icon">
@@ -541,9 +539,6 @@
                 <h3 class="section-subheading"></h3>
             </div>
         </div>
-        <div class="row">
-            <audio src="sadi2.mp3" id="myaudio" loop="loop" allow="autoplay"></audio>
-        </div>
        
         <div class="row">
             <!-- Location Area Start -->
@@ -639,13 +634,6 @@
     All Jquery Script link
 ===========================================-->
 
-<script type="text/javascript">
-    window.onload=function(){
-      document.getElementById("myaudio").play();
-    }
-  </script>
-    
-
 <!-- Bootstrap core JavaScript -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/jquery/popper.min.js"></script>
@@ -683,5 +671,15 @@
 <!-- Custom scripts for this template -->
 <script src="assets/js/custom.js"></script>
 
+<audio autoplay loop id="playAudio">
+    <source src="sadi2.mp3">
+</audio>
+<script>
+    $(document).ready(function() {
+        $('body').on('click mouseover mousedown', function(event) {
+        document.getElementById('playAudio').play(); 
+        });
+    });
+</script>
 </body>
 </html>

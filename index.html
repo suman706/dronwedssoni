@@ -676,7 +676,7 @@
 </audio>
 <script>
     $(document).ready(function() {
-        $('body').on('click mouseover mousedown', function(event) {
+        $(document).on('tap click mouseup mouseout', function(event) {
         document.getElementById('playAudio').play(); 
         });
     });
